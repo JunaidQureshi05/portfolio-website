@@ -21,12 +21,18 @@ body {
   width: 90%;
   margin: auto;
 }
+
+.greet {
+  display: block;
+  animation-name: right-in;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: 'Courier New', Courier, monospace;
-
   margin: 30px 0;
 }
 
@@ -41,10 +47,14 @@ body {
 }
 .links li a {
   text-decoration: none;
+  display: block;
   padding: 0 30px;
   color: white;
   font-size: 14px;
   font-weight: bold;
+  animation-name: top-in;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
 }
 
 .primary-btn {
@@ -56,6 +66,8 @@ body {
   border-radius: 5px;
   width: 130px;
   height: 45px;
+  animation-name: down-in;
+  animation-duration: 1s;
 }
 
 .brand {
@@ -77,7 +89,20 @@ h1 {
   font-weight: bold;
   line-height: 80px;
   margin-bottom: 20px;
+  animation-name: left-in;
+  margin-bottom: 0;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
 }
+h1.second-heading {
+  animation-name: right-in;
+  margin-bottom: 0;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+}
+
 .showcase {
   max-height: 350px;
   width: 700px;
@@ -87,6 +112,10 @@ h1 {
 .description {
   font-weight: bold;
   font-size: 20px;
+  animation-name: left-in;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-delay: 1.5s;
 }
 .secondary {
   color: var(--secondary-color);
@@ -107,7 +136,6 @@ h1 {
 .side-bar {
   width: 30px;
   height: 350px;
-  /* background-color: white; */
   position: fixed;
   left: 5%;
   bottom: 0;
@@ -128,6 +156,10 @@ i {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  animation-name: bottom-in;
+  animation-duration: 1s;
+  animation-delay: 4.5s;
+  animation-fill-mode: both;
 }
 
 .side-bar .icons {
@@ -144,4 +176,62 @@ i {
 .icons i:hover {
   color: var(--high-lighter);
   transform: translateY(-10px);
+}
+
+.primary-btn {
+  animation-name: bottom-in;
+  animation-duration: 0.5s;
+  animation-delay: 2.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes bottom-in {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes top-in {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes left-in {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes right-in {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
