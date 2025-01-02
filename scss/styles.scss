@@ -62,4 +62,13 @@
   .header .roles {
     font-size: 18px !important;
   }
+
+  .stats {
+    .stat {
+      border-right: none !important;
+      margin-bottom: 40px;
+      border-bottom: var(--bs-dark) solid 1px;
+      padding-bottom: 20px;
+    }
+  }
 }
